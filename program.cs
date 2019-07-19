@@ -30,6 +30,8 @@ namespace Bakery
         Console.WriteLine("Price per pastry: $" + item.UnitPrice);
       }
 
+      int total = 0;
+
       Console.WriteLine("If you would like to buy bread enter Y. If not, enter N.");
       string breadBuyingCheck = Console.ReadLine();
       if(breadBuyingCheck.ToUpper()== "Y")
@@ -42,6 +44,7 @@ namespace Bakery
           Console.WriteLine("Enter the number of loaves you would like to buy: ");
           string stringUnitsPurchasing = Console.ReadLine();
           int unitsPurchasing = int.Parse(stringUnitsPurchasing);
+          total += item.BreadOrder(unitsPurchasing);
           Console.WriteLine("Your bread total comes to: $" + item.BreadOrder(unitsPurchasing));
         }
       }
@@ -66,6 +69,7 @@ namespace Bakery
           Console.WriteLine("Enter the number of pastries you would like to buy: ");
           string stringUnitsPurchasing = Console.ReadLine();
           int unitsPurchasing = int.Parse(stringUnitsPurchasing);
+          total += item.PastryOrder(unitsPurchasing);
           Console.WriteLine("Your pastry total comes to: $" + item.PastryOrder(unitsPurchasing));
         }
       }
@@ -77,7 +81,7 @@ namespace Bakery
       {
         Console.WriteLine("I'm sorry, we didn't understand that.");
       }
-      
+      Console.WriteLine(total);
     }
   }
 }
