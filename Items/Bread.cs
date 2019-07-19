@@ -30,15 +30,20 @@ namespace Bakery.Items
       return _DealDescription;
     }
 
-    public int GetDealPrice()
-    {
-      return _DealPrice;
-    }
-
-    // public bool WorthBuying(int maxPrice)
+    // public int GetDealPrice()
     // {
-    //   return (Price < maxPrice);
+    //   return _DealPrice;
     // }
+    public int BreadOrder(int unitsPurchasing)
+    {
+      if (unitsPurchasing % 3 == 0)
+      {
+        return (_DealPrice * (unitsPurchasing/3));
+      }
+      else
+      {
+        return (_UnitPrice * unitsPurchasing);
+      }
+    }
   }
-
 }
