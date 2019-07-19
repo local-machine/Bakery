@@ -57,7 +57,7 @@ namespace Bakery
         Console.WriteLine("I'm sorry, we didn't understand that.");
       }
 
-      Console.WriteLine("If you would like to pastries enter Y. If not, enter N.");
+      Console.WriteLine("If you would like to purchase pastries enter Y. If not, enter N.");
       string pastryBuyingCheck = Console.ReadLine();
       if(pastryBuyingCheck.ToUpper()== "Y")
       {
@@ -81,7 +81,8 @@ namespace Bakery
       {
         Console.WriteLine("I'm sorry, we didn't understand that.");
       }
-      Console.WriteLine(total);
+      Console.WriteLine("Your total is: $" + total);
+      Console.WriteLine("Thank you for shopping at Pierre's Bakery!");
     }
   }
 }
