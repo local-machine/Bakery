@@ -17,13 +17,16 @@ namespace Bakery.Items
 
     public int BreadOrder(int unitsPurchasing)
     {
+      int breadTotal = 0;
       if (unitsPurchasing % 3 == 0)
       {
-        return (DealPrice * (unitsPurchasing/3));
+        breadTotal = (DealPrice * (unitsPurchasing/3));
+        return breadTotal;
       }
       else
       {
-        return (UnitPrice * unitsPurchasing);
+        breadTotal = (UnitPrice * unitsPurchasing);
+        return breadTotal;
       }
     }
   }

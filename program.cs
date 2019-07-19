@@ -49,6 +49,10 @@ namespace Bakery
       {
         Console.WriteLine("No bread for you today :(");
       }
+      else 
+      {
+        Console.WriteLine("I'm sorry, we didn't understand that.");
+      }
 
       Console.WriteLine("If you would like to pastries enter Y. If not, enter N.");
       string pastryBuyingCheck = Console.ReadLine();
@@ -63,15 +67,17 @@ namespace Bakery
           string stringUnitsPurchasing = Console.ReadLine();
           int unitsPurchasing = int.Parse(stringUnitsPurchasing);
           Console.WriteLine("Your pastry total comes to: $" + item.PastryOrder(unitsPurchasing));
-
         }
       }
-      else if(breadBuyingCheck.ToUpper()== "N")
+      else if(pastryBuyingCheck.ToUpper()== "N")
       {
         Console.WriteLine("No pastries for you today :(");
       }
-
-
+      else 
+      {
+        Console.WriteLine("I'm sorry, we didn't understand that.");
+      }
+      
     }
   }
 }
