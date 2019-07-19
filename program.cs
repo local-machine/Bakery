@@ -20,14 +20,14 @@ namespace Bakery
 
       foreach(Bread item in Breads)
       {
-        Console.WriteLine("Price per loaf: $" + item.UnitPrice);
+        Console.WriteLine("Price per loaf: $" + item.GetUnitPrice());
       }
 
       List<Pastry> Pastries = new List<Pastry>() { croissant };
 
       foreach(Pastry item in Pastries)
       {
-        Console.WriteLine("Price per pastry: $" + item.UnitPrice);
+        Console.WriteLine("Price per pastry: $" + item.GetUnitPrice());
       }
 
       Console.WriteLine("If you would like to buy bread enter B. If you would like to buy pastries enter P.");
@@ -37,8 +37,8 @@ namespace Bakery
         Console.WriteLine("Let's get this bread!");
         foreach(Bread item in Breads)
         {
-          Console.WriteLine(item.Description);
-          Console.WriteLine("Flash Sale Alert: " + item.DealDescription);
+          Console.WriteLine(item.GetDescription());
+          Console.WriteLine("Flash Sale Alert: " + item.GetDealDescription());
           Console.WriteLine("Enter the number of loaves you would like to buy: ");
           string stringUnitsPurchasing = Console.ReadLine();
           int unitsPurchasing = int.Parse(stringUnitsPurchasing);
@@ -50,8 +50,8 @@ namespace Bakery
         Console.WriteLine("Let's buy some pastries!");
         foreach(Pastry item in Pastries)
         {
-          Console.WriteLine(item.Description);
-          Console.WriteLine("Flash Sale Alert: " + item.DealDescription);
+          Console.WriteLine(item.GetDescription());
+          Console.WriteLine("Flash Sale Alert: " + item.GetDealDescription());
           Console.WriteLine("Enter the number of pastries you would like to buy: ");
           string stringUnitsPurchasing = Console.ReadLine();
           int unitsPurchasing = int.Parse(stringUnitsPurchasing);
